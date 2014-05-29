@@ -1,4 +1,4 @@
-function score = abcNoisyCompareAndScore( UNUSED_targetFileName, cellInfoArray, noiseVariance )
+function score = abcNoisyCompareAndScore( UNUSED_targetFileName, fakeCellInfoArray, noiseVariance )
 %abcNoisyCompareAndScore
     %originalImage = imread( targetFileName );
 
@@ -6,8 +6,9 @@ function score = abcNoisyCompareAndScore( UNUSED_targetFileName, cellInfoArray, 
         addpath( '../abcCellGenerator/' );
         %addpath( '../Matlab/fminsearchbnd/' );
     end
-    cellInfoArray = cell2mat( cellInfoArray );
-    %disp( cellInfoArray );
+    
+    %fuck I hate matlab - you suck, you really do
+    cellInfoArray = vertcat(fakeCellInfoArray{:});   
 
     %score = 1.2;
     targetCanvas = abcTargetCanvas();

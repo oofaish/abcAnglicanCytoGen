@@ -20,7 +20,7 @@ public class ABCCytoGen {
 
   public static void runExample() throws MatlabConnectionException, MatlabInvocationException
   {
-    double[][] array = new double[][] { { 110, 110, 30 } };
+    double[][] array = new double[][] { { 110, 110, 30 }, { 50, 50, 20 } };
 
     //MatlabTypeConverter processor = new MatlabTypeConverter (proxy );
     //processor.setNumericArray("array", new MatlabNumericArray(array, null));

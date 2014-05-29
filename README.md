@@ -9,3 +9,6 @@ javac -cp matlabcontrol-4.1.0.jar:. ABCMatlabInit.java;java -cp matlabcontrol-4.
 From then on, keep that matlab session open, and just call this - the code should run in the same matlab session
 
 javac -cp matlabcontrol-4.1.0.jar:. ABCCytoGen.java;java -cp matlabcontrol-4.1.0.jar:. ABCCytoGen
+
+the main method to play with it is:
+double noisyCompareAndScore( String _targetCanvasFilename/*UNUSED FOR NOW*/, double[][] cellInfoArray, double noiseVariance )
