@@ -3,7 +3,7 @@ function score = abcNoisyCompareAndScore( UNUSED_targetFileName, cellInfoArray, 
     %originalImage = imread( targetFileName );
 
     if exist( 'abcGenerateImage', 'file' ) ~= 2
-        addpath( '../Matlab/abcCellGenerator/' );
+        addpath( '../abcCellGenerator/' );
         %addpath( '../Matlab/fminsearchbnd/' );
     end
     cellInfoArray = cell2mat( cellInfoArray );

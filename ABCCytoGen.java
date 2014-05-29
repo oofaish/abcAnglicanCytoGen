@@ -15,20 +15,11 @@ public class ABCCytoGen {
 
   public static void main(String[] args) throws MatlabConnectionException, MatlabInvocationException
   {
-    //System.out.println("Initiating Matlab");
+    runExample();
+  }
 
-    //MatlabProxyFactoryOptions options = new MatlabProxyFactoryOptions.Builder()
-    //                                          .setUsePreviouslyControlledSession(true)
-    //                                          .setHidden(true)
-    //                                          .setMatlabLocation(null).build();
-
-    //FIXME - looks like you have to call it without options the first time you run it. boohoo.
-    //hence the script MatlabInit
-    //MatlabProxyFactory factory = new MatlabProxyFactory( options );
-    //MatlabProxy proxy = factory.getProxy();
-
-    //MatlabProxy proxy = getMatlabProxy();
-    //Create and print a 2D double array
+  public static void runExample() throws MatlabConnectionException, MatlabInvocationException
+  {
     double[][] array = new double[][] { { 110, 110, 30 } };
 
     //MatlabTypeConverter processor = new MatlabTypeConverter (proxy );
@@ -36,8 +27,9 @@ public class ABCCytoGen {
 
     double score = noisyCompareAndScore( new String(), array, 0.001 );
     System.out.println("Score " + score );
-  }
 
+
+  }
   public static MatlabProxy getMatlabProxy() throws MatlabConnectionException, MatlabInvocationException
   {
     MatlabProxyFactoryOptions options = new MatlabProxyFactoryOptions.Builder()
